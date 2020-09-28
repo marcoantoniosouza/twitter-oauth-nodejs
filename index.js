@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
 
 app.get('/success', (req, res) => {
     const { displayName, username } = req.session.passport.user
-    res.send('YAYYYYY ' + username + ' - ' + displayName + '!')
+    res.send(`YAYYYYY ${username} - ${displayName}!`)
 })
 
 app.get('/auth/twitter', passport.authenticate('twitter'));
